@@ -22,6 +22,16 @@ export type FamiliaOlfativa =
   | 'Gourmand'
   | 'Fougère';
 
+// ─── Notas Olfativas e Intensidad ──────────────────────────────────────────
+
+export interface NotasOlfativas {
+  salida?: string[];
+  corazon?: string[];
+  fondo?: string[];
+}
+
+export type NivelIntensidad = 1 | 2 | 3 | 4 | 5;
+
 // ─── Modelos de datos ──────────────────────────────────────────────────────
 
 export interface Marca {
@@ -45,6 +55,10 @@ export interface Perfume {
   precioVentaCrc: number;     // Precio público (visible al cliente)
   stockProveedor: boolean;
   // Nota: precioProveedorCrc y margenGanancia NO se exponen al frontend
+  imagenes?: string[];   // preparado para multi-ángulo (v2); v1 puede traer 0 o 1 elemento
+  notas?: NotasOlfativas;
+  duracion?: NivelIntensidad;
+  proyeccion?: NivelIntensidad;
 }
 
 export interface Pedido {

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import type { Perfume, FiltrosCatalogo } from '../tipos/Perfume.tipos';
-import { PERFUMES_SIMULADOS } from '../tipos/datos-simulados';
+import { CATALOGO_PERFUMES } from '../tipos/datos-catalogo';
 
 // En producción, este hook llamaría a la API real:
 // import { clienteApi } from '@/lib/clienteApi';
@@ -13,7 +13,7 @@ export function usePerfumes() {
   const [cargando] = useState(false);
 
   const perfumesFiltrados = useMemo(() => {
-    let resultado: Perfume[] = PERFUMES_SIMULADOS;
+    let resultado: Perfume[] = CATALOGO_PERFUMES;
 
     if (filtros.clasificacion) {
       resultado = resultado.filter((p) => p.clasificacion === filtros.clasificacion);

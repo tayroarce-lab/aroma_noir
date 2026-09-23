@@ -28,7 +28,7 @@ export default function BarraNavegacion({
         <Link href="/" className="navbar-logo">
           <span className="navbar-logo-icono">✦</span>
           <span className="navbar-logo-texto">
-            Luxe<em>Parfums</em>
+            aroma noir<em>.</em>
           </span>
         </Link>
 

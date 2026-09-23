@@ -1,24 +1,32 @@
 import type { Metadata } from 'next';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
 
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
-  title: 'LuxeParfums CR — Perfumería de Lujo',
+  title: 'Aroma Noir — Perfumes Originales',
   description:
-    'Descubre fragancias de nicho, árabes y de diseñador. Entrega a domicilio en Costa Rica. Pago por SINPE Móvil.',
-  keywords: 'perfumes, fragancias, nicho, árabe, lujo, Costa Rica, SINPE',
+    'Perfumes 100% originales en Costa Rica. Deja estela. Pedidos por WhatsApp o Instagram, pago por SINPE Móvil.',
+  keywords: 'perfumes, fragancias, Costa Rica, Aroma Noir, SINPE, perfumería',
 };
 
 export default function LayoutRaiz({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es-CR">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="es-CR" className={`${cormorant.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );

@@ -28,15 +28,16 @@ function limpiarNumero(numero: string): string {
 }
 
 /**
- * Genera el mensaje de pedido formateado para el chatbot de WhatsApp.
+ * Genera el mensaje de pedido formateado para WhatsApp e Instagram.
  * Incluye: lista de productos, totales, datos del cliente e instrucciones de pago.
  */
-function construirMensaje(resumen: ResumenPedido): string {
+export function construirMensaje(resumen: ResumenPedido): string {
   const { items, subtotal, cliente, fechaHora } = resumen;
 
   // Encabezado del pedido
   const encabezado = [
-    '✨ *NUEVO PEDIDO — LuxeParfums CR* ✨',
+    '✨ *NUEVO PEDIDO — Aroma Noir* ✨',
+    '_Deja estela._',
     '━━━━━━━━━━━━━━━━━━━━',
     '',
   ].join('\n');
@@ -73,7 +74,7 @@ function construirMensaje(resumen: ResumenPedido): string {
     '━━━━━━━━━━━━━━━━━━━━',
     `📅 Pedido generado: ${fechaHora}`,
     '',
-    '_Este mensaje fue generado automáticamente desde la tienda LuxeParfums CR_',
+    '_Este mensaje fue generado automáticamente desde aroma-noir.vercel.app_',
   ].join('\n');
 
   return encabezado + lineasProductos + resumenPago;
