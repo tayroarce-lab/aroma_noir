@@ -123,6 +123,22 @@ export default function PaginaInicio() {
             onAgregarAlCarrito={handleAgregarAlCarrito}
           />
         </div>
+
+        {/* Aviso: catálogo mostrado es una selección, no el inventario completo */}
+        <div className="catalogo-aviso-mas">
+          <span className="catalogo-aviso-icono">✦</span>
+          <p>
+            ¿Buscás otro perfume que no ves aquí? No dudés en escribirnos, seguro que lo tenemos 😉
+          </p>
+          <a
+            href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMERO ?? '').replace(/\D/g, '')}?text=${encodeURIComponent('Hola, busco un perfume que no veo en el catálogo de Aroma Noir.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="catalogo-aviso-enlace"
+          >
+            Escribinos por WhatsApp
+          </a>
+        </div>
       </section>
     </>
   );

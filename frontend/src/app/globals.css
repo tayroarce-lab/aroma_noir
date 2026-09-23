@@ -1042,6 +1042,53 @@ p {
   line-height: 1.8;
 }
 
+/* ─── Aviso "¿no encontrás tu perfume?" ─────────────────────────── */
+.catalogo-aviso-mas {
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px dashed var(--color-arena);
+  border-radius: var(--radius-md);
+  background: var(--color-hueso);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.catalogo-aviso-icono {
+  color: var(--color-dorado);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.catalogo-aviso-mas p {
+  color: var(--color-grafito);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.catalogo-aviso-enlace {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-carbon);
+  color: var(--color-perla);
+  text-decoration: none;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-xs);
+  font-weight: 500;
+  transition: all var(--duration-normal) var(--ease-lujo);
+  flex-shrink: 0;
+}
+
+.catalogo-aviso-enlace:hover {
+  background: var(--color-dorado);
+}
+
 /* ─────────────────────────────────────────────────────────────────
    BARRA DE NIVEL (INTENSIDAD / DURACIÓN / PROYECCIÓN)
    ───────────────────────────────────────────────────────────────── */
