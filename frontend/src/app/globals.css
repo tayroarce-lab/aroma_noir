@@ -1370,6 +1370,46 @@ p {
   color: var(--color-dorado);
 }
 
+/* ─── Acordes principales (barras de colores) ───────────────────── */
+.detalle-bloque-acordes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.acordes-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--color-hueso);
+  border: 1px solid var(--color-arena);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+}
+
+.acorde-fila {
+  width: 100%;
+}
+
+.acorde-barra {
+  display: flex;
+  align-items: center;
+  min-width: 90px;
+  height: 2rem;
+  border-radius: var(--radius-xs);
+  padding: 0 0.85rem;
+  transition: width var(--duration-lenta) var(--ease-lujo);
+}
+
+.acorde-etiqueta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+}
+
 .detalle-bloque-rendimiento {
   display: flex;
   flex-direction: column;

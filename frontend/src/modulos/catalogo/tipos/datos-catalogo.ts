@@ -15,6 +15,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-09-14-120327.png',
     precioVentaCrc: 37500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Frutal', intensidad: 100 }, { nombre: 'Floral', intensidad: 85 }, { nombre: 'Dulce', intensidad: 70 }, { nombre: 'Almizclado', intensidad: 55 }, { nombre: 'Vainilla', intensidad: 40 }],
     notas: {
       salida: ['Albaricoque', 'Pera', 'Bergamota', 'Hojas de violeta'],
       corazon: ['Ciruela', 'Nardos', 'Frambuesa', 'Rosa'],
@@ -36,6 +37,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/img_9972-247x247.png',
     precioVentaCrc: 61000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Dulce', intensidad: 80 }, { nombre: 'Almizclado', intensidad: 65 }, { nombre: 'Cítrico', intensidad: 50 }, { nombre: 'Vainilla', intensidad: 40 }],
     notas: {
       salida: ['Flor de azahar del naranjo', 'Naranja amarga', 'Bergamota'],
       corazon: ['Iris Pallida', 'Nardo de la India', 'Ambreta'],
@@ -57,6 +59,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-09-14-143707-247x247.jpg',
     precioVentaCrc: 50500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Cítrico', intensidad: 75 }, { nombre: 'Dulce', intensidad: 60 }, { nombre: 'Almizclado', intensidad: 45 }, { nombre: 'Verde', intensidad: 35 }],
     notas: {
       salida: ['Flor de azahar del naranjo', 'Mandarina verde', 'Naranja amarga'],
       corazon: ['Nardo de la India', 'Neroli'],
@@ -78,6 +81,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-09-16-165837.png',
     precioVentaCrc: 50500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Frutal', intensidad: 100 }, { nombre: 'Floral', intensidad: 85 }, { nombre: 'Dulce', intensidad: 70 }, { nombre: 'Gourmand', intensidad: 55 }, { nombre: 'Vainilla', intensidad: 40 }],
     notas: {
       salida: ['Flor de plátano', 'Pera', 'Bergamota'],
       corazon: ['Margarita de chocolate', 'Jazmín'],
@@ -99,6 +103,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-09-16-122328.png',
     precioVentaCrc: 58000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Cítrico', intensidad: 80 }, { nombre: 'Almizclado', intensidad: 65 }, { nombre: 'Ámbar', intensidad: 45 }, { nombre: 'Fresco', intensidad: 35 }],
     notas: {
       salida: ['Bergamota italiana', 'Cítricos'],
       corazon: ['Jazmín', 'Neroli'],
@@ -120,6 +125,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-08-27-153727-247x247.png',
     precioVentaCrc: 13500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Frutal', intensidad: 80 }, { nombre: 'Dulce', intensidad: 65 }, { nombre: 'Amaderado', intensidad: 45 }, { nombre: 'Especiado', intensidad: 35 }],
     notas: {
       salida: ['Pera', 'Bergamota', 'Grosellas negras'],
       corazon: ['Flor de azahar del naranjo', 'Jazmín', 'Raíz de lirio'],
@@ -141,6 +147,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/629017072607-247x247.jpg',
     precioVentaCrc: 19500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Frutal', intensidad: 100 }, { nombre: 'Floral', intensidad: 85 }, { nombre: 'Oriental', intensidad: 70 }, { nombre: 'Amaderado', intensidad: 55 }, { nombre: 'Especiado', intensidad: 40 }],
     notas: {
       salida: ['Frambuesa', 'Manzana', 'Naranja', 'Violeta'],
       corazon: ['Rosa', 'Iris', 'Peonía', 'Jazmín'],
@@ -162,6 +169,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-09-11-161632.jpg',
     precioVentaCrc: 22500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Frutal', intensidad: 100 }, { nombre: 'Floral', intensidad: 80 }, { nombre: 'Dulce', intensidad: 65 }, { nombre: 'Amaderado', intensidad: 50 }, { nombre: 'Verde', intensidad: 35 }],
     notas: {
       salida: ['Granada', 'Manzana', 'Toronja'],
       corazon: ['Jazmín sambac', 'Iris', 'Cítricos'],
@@ -184,6 +192,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 76000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Dulce', intensidad: 100 }, { nombre: 'Gourmand', intensidad: 85 }, { nombre: 'Floral', intensidad: 70 }, { nombre: 'Almizclado', intensidad: 55 }, { nombre: 'Frutal', intensidad: 40 }],
     notas: {
       salida: ['Grosellas negras', 'Pera'],
       corazon: ['Iris', 'Jazmín', 'Flor de azahar del naranjo'],
@@ -205,6 +214,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 62500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Dulce', intensidad: 100 }, { nombre: 'Gourmand', intensidad: 85 }, { nombre: 'Floral', intensidad: 70 }, { nombre: 'Almizclado', intensidad: 55 }, { nombre: 'Frutal', intensidad: 40 }],
     notas: {
       salida: ['Grosellas negras', 'Pera'],
       corazon: ['Iris', 'Jazmín', 'Flor de azahar del naranjo'],
@@ -226,6 +236,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 55500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Frutal', intensidad: 80 }, { nombre: 'Dulce', intensidad: 65 }, { nombre: 'Almizclado', intensidad: 50 }, { nombre: 'Especiado', intensidad: 35 }],
     notas: {
       salida: ['Calipsone', 'Bayas rojas', 'Bergamota'],
       corazon: ['Azucena', 'Ylang-ylang', 'Jazmín'],
@@ -248,6 +259,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/jean-paul-gaultier-ladies-divine-gift-set-fragrances-8435415103169.jpg',
     precioVentaCrc: 71000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Frutal', intensidad: 80 }, { nombre: 'Dulce', intensidad: 65 }, { nombre: 'Almizclado', intensidad: 50 }, { nombre: 'Especiado', intensidad: 35 }],
     notas: {
       salida: ['Calipsone', 'Bayas rojas', 'Bergamota'],
       corazon: ['Azucena', 'Ylang-ylang', 'Jazmín'],
@@ -269,6 +281,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-08-24-121023.png',
     precioVentaCrc: 74500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Frutal', intensidad: 100 }, { nombre: 'Floral', intensidad: 80 }, { nombre: 'Aromático', intensidad: 65 }, { nombre: 'Dulce', intensidad: 50 }, { nombre: 'Almizclado', intensidad: 35 }],
     notas: {
       salida: ['Frambuesa', 'Mandarina'],
       corazon: ['Flor de azahar del naranjo', 'Lavanda'],
@@ -290,6 +303,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/3614272907690.jpg',
     precioVentaCrc: 59000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Cítrico', intensidad: 75 }, { nombre: 'Dulce', intensidad: 60 }, { nombre: 'Almizclado', intensidad: 45 }, { nombre: 'Vainilla', intensidad: 35 }],
     notas: {
       salida: ['Flor de azahar del naranjo', 'Bergamota'],
       corazon: ['Nardo de la India', 'Jazmín de la India'],
@@ -311,6 +325,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 62500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Dulce', intensidad: 100 }, { nombre: 'Floral', intensidad: 85 }, { nombre: 'Gourmand', intensidad: 70 }, { nombre: 'Almizclado', intensidad: 55 }, { nombre: 'Vainilla', intensidad: 40 }],
     notas: {
       salida: ['Pera', 'Flor de azahar del naranjo', 'Bergamota'],
       corazon: ['Nardos', 'Jazmín', 'Hojas de violeta'],
@@ -332,6 +347,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 19500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Cítrico', intensidad: 100 }, { nombre: 'Frutal', intensidad: 85 }, { nombre: 'Floral', intensidad: 65 }, { nombre: 'Verde', intensidad: 50 }, { nombre: 'Almizclado', intensidad: 35 }],
     notas: {
       salida: ['Kiwi', 'Ruibarbo', 'Pimienta rosa'],
       corazon: ['Sandía', 'Ciclamen', 'Jazmín'],
@@ -353,6 +369,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/8431754342016.jpg',
     precioVentaCrc: 17000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Oriental', intensidad: 80 }, { nombre: 'Especiado', intensidad: 65 }, { nombre: 'Amaderado', intensidad: 50 }, { nombre: 'Ámbar', intensidad: 40 }],
     notas: {
       salida: ['Violeta', 'Notas marinas', 'Hoja de plátano', 'Petitgrain'],
       corazon: ['Violeta', 'Magnolia', 'Lirio de los valles', 'Pimienta'],
@@ -374,6 +391,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 11500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Acuático', intensidad: 100 }, { nombre: 'Floral', intensidad: 75 }, { nombre: 'Cítrico', intensidad: 60 }, { nombre: 'Fresco', intensidad: 50 }, { nombre: 'Almizclado', intensidad: 35 }],
     notas: {
       salida: ['Notas marinas', 'Bergamota', 'Mandarina'],
       corazon: ['Muguet', 'Jazmín', 'Flor de loto'],
@@ -395,6 +413,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 19500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Acuático', intensidad: 100 }, { nombre: 'Cítrico', intensidad: 80 }, { nombre: 'Verde', intensidad: 60 }, { nombre: 'Floral', intensidad: 45 }, { nombre: 'Almizclado', intensidad: 30 }],
     notas: {
       salida: ['Cítricos', 'Manzana verde', 'Lavanda'],
       corazon: ['Flores blancas', 'Jazmín', 'Violeta'],
@@ -416,6 +435,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 10000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Fresco', intensidad: 100 }, { nombre: 'Cítrico', intensidad: 80 }, { nombre: 'Verde', intensidad: 65 }, { nombre: 'Acuático', intensidad: 50 }, { nombre: 'Almizclado', intensidad: 35 }],
     notas: {
       salida: ['Té verde', 'Jengibre', 'Limón'],
       corazon: ['Peonía', 'Fresia', 'Guisante de olor'],
@@ -437,6 +457,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 14500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Cítrico', intensidad: 100 }, { nombre: 'Floral', intensidad: 80 }, { nombre: 'Fresco', intensidad: 65 }, { nombre: 'Frutal', intensidad: 50 }, { nombre: 'Almizclado', intensidad: 35 }],
     notas: {
       salida: ['Manzano en flor', 'Camelia', 'Mandarina', 'Grosellas negras'],
       corazon: ['Limón', 'Madreselva', 'Rosa', 'Lirio'],
@@ -458,6 +479,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 23500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Frutal', intensidad: 100 }, { nombre: 'Dulce', intensidad: 85 }, { nombre: 'Gourmand', intensidad: 70 }, { nombre: 'Floral', intensidad: 55 }, { nombre: 'Almizclado', intensidad: 40 }],
     notas: {
       salida: ['Pera blanca', 'Frambuesa'],
       corazon: ['Crema de coco', 'Rosa rosada'],
@@ -479,6 +501,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 21000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Cítrico', intensidad: 100 }, { nombre: 'Floral', intensidad: 80 }, { nombre: 'Fresco', intensidad: 65 }, { nombre: 'Frutal', intensidad: 45 }, { nombre: 'Verde', intensidad: 30 }],
     notas: {
       salida: ['Naranja', 'Toronja sanguina', 'Mandarina', 'Bergamota'],
       corazon: ['Lirio de los valles', 'Fresia', 'Orquídea', 'Rosa'],
@@ -500,6 +523,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/719346065405.jpg',
     precioVentaCrc: 13000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Frutal', intensidad: 100 }, { nombre: 'Dulce', intensidad: 85 }, { nombre: 'Gourmand', intensidad: 70 }, { nombre: 'Floral', intensidad: 50 }, { nombre: 'Amaderado', intensidad: 35 }],
     notas: {
       salida: ['Kiwi', 'Lichi rojo', 'Membrillo'],
       corazon: ['Chocolate blanco', 'Quequito', 'Orquídea', 'Jazmín'],
@@ -521,6 +545,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 13000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Dulce', intensidad: 100 }, { nombre: 'Especiado', intensidad: 80 }, { nombre: 'Gourmand', intensidad: 65 }, { nombre: 'Cítrico', intensidad: 50 }, { nombre: 'Almizclado', intensidad: 35 }],
     notas: {
       salida: ['Cítricos', 'Té floral', 'Jengibre'],
       corazon: ['Leche', 'Canela', 'Cardamomo', 'Orquídea'],
@@ -542,6 +567,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/812256020301-247x247.jpg',
     precioVentaCrc: 21000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Dulce', intensidad: 100 }, { nombre: 'Frutal', intensidad: 85 }, { nombre: 'Gourmand', intensidad: 70 }, { nombre: 'Floral', intensidad: 55 }, { nombre: 'Almizclado', intensidad: 40 }],
     notas: {
       salida: ['Frambuesa', 'Pera', 'Toronja'],
       corazon: ['Orquídea de vainilla', 'Lirio de los valles', 'Rosa'],
@@ -563,6 +589,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 41500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Floral', intensidad: 100 }, { nombre: 'Cítrico', intensidad: 80 }, { nombre: 'Fresco', intensidad: 65 }, { nombre: 'Almizclado', intensidad: 50 }, { nombre: 'Frutal', intensidad: 35 }],
     notas: {
       salida: ['Flor de azahar del naranjo', 'Flor de cactus', 'Mandarina', 'Bergamota'],
       corazon: ['Azucena', 'Gardenia', 'Fresia', 'Jazmín'],
@@ -587,6 +614,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/3616301623328.jpg',
     precioVentaCrc: 14500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Acuático', intensidad: 100 }, { nombre: 'Especiado', intensidad: 80 }, { nombre: 'Amaderado', intensidad: 65 }, { nombre: 'Fresco', intensidad: 50 }, { nombre: 'Cítrico', intensidad: 35 }],
     notas: {
       salida: ['Naranja', 'Albahaca', 'Hojas de violeta', 'Bergamota'],
       corazon: ['Nuez moscada', 'Canela', 'Pimienta rosa', 'Cardamomo'],
@@ -608,6 +636,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 8500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Acuático', intensidad: 100 }, { nombre: 'Verde', intensidad: 80 }, { nombre: 'Fresco', intensidad: 65 }, { nombre: 'Amaderado', intensidad: 45 }, { nombre: 'Cítrico', intensidad: 30 }],
     notas: {
       salida: ['Manzana verde', 'Hojas verdes'],
       corazon: ['Flor de loto', 'Mimosa'],
@@ -629,6 +658,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 17500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Cítrico', intensidad: 100 }, { nombre: 'Fresco', intensidad: 85 }, { nombre: 'Acuático', intensidad: 65 }, { nombre: 'Verde', intensidad: 50 }, { nombre: 'Almizclado', intensidad: 35 }],
     notas: {
       salida: ['Limón', 'Bergamota', 'Mandarina', 'Piña', 'Cardamomo'],
       corazon: ['Lirio de los valles', 'Jazmín', 'Violeta', 'Nuez moscada'],
@@ -650,6 +680,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-09-14-102408-1.png',
     precioVentaCrc: 54000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Amaderado', intensidad: 100 }, { nombre: 'Especiado', intensidad: 80 }, { nombre: 'Cítrico', intensidad: 60 }, { nombre: 'Cuero', intensidad: 45 }, { nombre: 'Ámbar', intensidad: 35 }],
     notas: {
       salida: ['Jengibre', 'Notas cítricas'],
       corazon: ['Cuero', 'Acorde especiado'],
@@ -671,6 +702,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-09-16-101211-247x247.png',
     precioVentaCrc: 61500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Amaderado', intensidad: 100 }, { nombre: 'Cítrico', intensidad: 80 }, { nombre: 'Aromático', intensidad: 65 }, { nombre: 'Almizclado', intensidad: 50 }, { nombre: 'Especiado', intensidad: 35 }],
     notas: {
       salida: ['Naranja amarga', 'Bergamota'],
       corazon: ['Vetiver', 'Lavanda', 'Geranio'],
@@ -693,6 +725,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 40000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Especiado', intensidad: 100 }, { nombre: 'Dulce', intensidad: 80 }, { nombre: 'Ámbar', intensidad: 65 }, { nombre: 'Amaderado', intensidad: 50 }, { nombre: 'Vainilla', intensidad: 35 }],
     notas: {
       salida: ['Jengibre rojo', 'Cardamomo'],
       corazon: ['Maderas incandescentes', 'Caramelo'],
@@ -714,6 +747,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/Captura-de-pantalla-2026-09-11-173652-247x247.jpg',
     precioVentaCrc: 64000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Aromático', intensidad: 100 }, { nombre: 'Especiado', intensidad: 80 }, { nombre: 'Amaderado', intensidad: 65 }, { nombre: 'Ámbar', intensidad: 50 }, { nombre: 'Dulce', intensidad: 35 }],
     notas: {
       salida: ['Cardamomo', 'Pimienta'],
       corazon: ['Lavanda', 'Coco cremoso'],
@@ -735,6 +769,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 33000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Cítrico', intensidad: 100 }, { nombre: 'Amaderado', intensidad: 75 }, { nombre: 'Acuático', intensidad: 60 }, { nombre: 'Fresco', intensidad: 45 }, { nombre: 'Especiado', intensidad: 30 }],
     notas: {
       salida: ['Toronja', 'Bergamota', 'Mandarina siciliana', 'Enebro'],
       corazon: ['Pimienta', 'Romero', 'Palo de rosa'],
@@ -756,6 +791,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/737052852034.jpg',
     precioVentaCrc: 16500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Acuático', intensidad: 100 }, { nombre: 'Especiado', intensidad: 80 }, { nombre: 'Amaderado', intensidad: 65 }, { nombre: 'Fresco', intensidad: 50 }, { nombre: 'Cítrico', intensidad: 35 }],
     notas: {
       salida: ['Naranja', 'Albahaca', 'Hojas de violeta', 'Bergamota'],
       corazon: ['Nuez moscada', 'Canela', 'Pimienta rosa', 'Cardamomo'],
@@ -777,6 +813,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 17000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Cítrico', intensidad: 100 }, { nombre: 'Frutal', intensidad: 85 }, { nombre: 'Amaderado', intensidad: 70 }, { nombre: 'Ámbar', intensidad: 55 }, { nombre: 'Almizclado', intensidad: 40 }],
     notas: {
       salida: ['Limón', 'Piña', 'Grosellas negras', 'Bergamota', 'Manzana'],
       corazon: ['Abedul', 'Jazmín', 'Rosa'],
@@ -798,6 +835,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 14500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Oriental', intensidad: 100 }, { nombre: 'Especiado', intensidad: 80 }, { nombre: 'Dulce', intensidad: 65 }, { nombre: 'Amaderado', intensidad: 50 }, { nombre: 'Ámbar', intensidad: 35 }],
     notas: {
       salida: ['Manzana', 'Canela', 'Lavanda silvestre', 'Bergamota'],
       corazon: ['Flor de azahar del naranjo', 'Lirio de los valles'],
@@ -819,6 +857,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/844061000551.jpg',
     precioVentaCrc: 14500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Amaderado', intensidad: 100 }, { nombre: 'Especiado', intensidad: 80 }, { nombre: 'Cítrico', intensidad: 60 }, { nombre: 'Aromático', intensidad: 45 }, { nombre: 'Almizclado', intensidad: 30 }],
     notas: {
       salida: ['Lima', 'Bergamota', 'Canela', 'Nuez moscada', 'Mandarina'],
       corazon: ['Lavanda', 'Cilantro'],
@@ -840,6 +879,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: 'https://catalogoperfumes.com/wp-content/uploads/2026/09/3412242508027-247x247.jpg',
     precioVentaCrc: 8500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Acuático', intensidad: 100 }, { nombre: 'Frutal', intensidad: 75 }, { nombre: 'Floral', intensidad: 55 }, { nombre: 'Amaderado', intensidad: 40 }, { nombre: 'Fresco', intensidad: 30 }],
     notas: {
       salida: ['Piña', 'Bergamota', 'Durazno'],
       corazon: ['Lirio de agua', 'Jazmín'],
@@ -861,6 +901,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 10000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Fresco', intensidad: 100 }, { nombre: 'Cítrico', intensidad: 80 }, { nombre: 'Aromático', intensidad: 60 }, { nombre: 'Amaderado', intensidad: 45 }, { nombre: 'Almizclado', intensidad: 30 }],
     notas: {
       salida: ['Aldehídos', 'Lima', 'Bergamota'],
       corazon: ['Té verde', 'Violeta', 'Pimienta blanca'],
@@ -882,6 +923,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 28000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Especiado', intensidad: 100 }, { nombre: 'Floral', intensidad: 80 }, { nombre: 'Amaderado', intensidad: 65 }, { nombre: 'Ámbar', intensidad: 50 }, { nombre: 'Dulce', intensidad: 35 }],
     notas: {
       salida: ['Pimienta rosa', 'Pera', 'Nuez moscada', 'Bergamota'],
       corazon: ['Rosa', 'Clavo de olor', 'Magnolia'],
@@ -903,6 +945,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 10000,
     stockProveedor: true,
+    acordes: [{ nombre: 'Especiado', intensidad: 100 }, { nombre: 'Frutal', intensidad: 80 }, { nombre: 'Amaderado', intensidad: 60 }, { nombre: 'Dulce', intensidad: 45 }, { nombre: 'Almizclado', intensidad: 30 }],
     notas: {
       salida: ['Ciruela', 'Melón blanco', 'Flor de cactus'],
       corazon: ['Azafrán', 'Canela'],
@@ -924,6 +967,7 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 35500,
     stockProveedor: true,
+    acordes: [{ nombre: 'Cítrico', intensidad: 100 }, { nombre: 'Verde', intensidad: 80 }, { nombre: 'Aromático', intensidad: 65 }, { nombre: 'Especiado', intensidad: 50 }, { nombre: 'Amaderado', intensidad: 35 }],
     notas: {
       salida: ['Notas verdes', 'Toronja', 'Bergamota', 'Lavanda'],
       corazon: ['Jengibre', 'Violeta', 'Gardenia', 'Salvia'],

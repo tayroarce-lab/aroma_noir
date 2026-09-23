@@ -6,6 +6,7 @@ import type { Perfume } from '../tipos/Perfume.tipos';
 import { formatearCRC } from '@/lib/formateadores';
 import { useCarritoEstado } from '@/modulos/carrito/estado/useCarritoEstado';
 import BarraNivel from './BarraNivel';
+import AcordesPrincipales from './AcordesPrincipales';
 import PlaceholderPerfume from './PlaceholderPerfume';
 
 interface PropsDetallePerfume {
@@ -105,6 +106,9 @@ export default function DetallePerfume({ perfume }: PropsDetallePerfume) {
             {perfume.descripcion && (
               <p className="detalle-descripcion">{perfume.descripcion}</p>
             )}
+
+            {/* Acordes principales */}
+            <AcordesPrincipales acordes={perfume.acordes} />
 
             {/* Pirámide Olfativa */}
             <div className="detalle-bloque-notas">

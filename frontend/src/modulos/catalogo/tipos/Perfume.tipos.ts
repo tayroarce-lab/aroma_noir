@@ -32,6 +32,13 @@ export interface NotasOlfativas {
 
 export type NivelIntensidad = 1 | 2 | 3 | 4 | 5;
 
+// Acordes principales: vista rápida tipo "gráfico de barras" (nombre + qué tan
+// presente está en la fragancia, 1-100), ordenados de más a menos presente.
+export interface AcordePrincipal {
+  nombre: string;
+  intensidad: number; // 1-100
+}
+
 // ─── Modelos de datos ──────────────────────────────────────────────────────
 
 export interface Marca {
@@ -59,6 +66,7 @@ export interface Perfume {
   notas?: NotasOlfativas;
   duracion?: NivelIntensidad;
   proyeccion?: NivelIntensidad;
+  acordes?: AcordePrincipal[];
 }
 
 export interface Pedido {
