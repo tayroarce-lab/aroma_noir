@@ -374,6 +374,13 @@ export const CATALOGO_PERFUMES: Perfume[] = [
     imagenUrl: null,
     precioVentaCrc: 11500,
     stockProveedor: true,
+    notas: {
+      salida: ['Notas marinas', 'Bergamota', 'Mandarina'],
+      corazon: ['Muguet', 'Jazmín', 'Flor de loto'],
+      fondo: ['Almizcle', 'Madera a la deriva', 'Ámbar'],
+    },
+    duracion: 3,
+    proyeccion: 2,
   },
   {
     id: 'p-19',
