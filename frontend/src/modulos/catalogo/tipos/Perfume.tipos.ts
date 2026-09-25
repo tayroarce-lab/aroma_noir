@@ -61,6 +61,7 @@ export interface Perfume {
   imagenUrl?: string | null;
   precioVentaCrc: number;     // Precio público (visible al cliente)
   stockProveedor: boolean;
+  destacado: boolean;
   // Nota: precioProveedorCrc y margenGanancia NO se exponen al frontend
   imagenes?: string[];   // preparado para multi-ángulo (v2); v1 puede traer 0 o 1 elemento
   notas?: NotasOlfativas;

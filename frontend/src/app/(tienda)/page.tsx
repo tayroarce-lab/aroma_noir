@@ -2,13 +2,18 @@
 
 import { usePerfumes } from '@/modulos/catalogo/hooks/usePerfumes';
 import GridCatalogo from '@/modulos/catalogo/componentes/GridCatalogo';
+import SeccionCatalogo from '@/modulos/catalogo/componentes/SeccionCatalogo';
+import BarraBusqueda from '@/modulos/catalogo/componentes/BarraBusqueda';
 import Filtros from '@/modulos/catalogo/componentes/Filtros';
 import { useCarritoEstado } from '@/modulos/carrito/estado/useCarritoEstado';
+import { generarEnlaceWhatsappTexto } from '@/modulos/carrito/utilidades/generarEnlaceWhatsapp';
 import type { ClasificacionPerfume, FamiliaOlfativa, GeneroPerfume, Perfume } from '@/modulos/catalogo/tipos/Perfume.tipos';
 
 export default function PaginaInicio() {
   const {
     perfumes,
+    arabeDisenador,
+    nicho,
     total,
     cargando,
     filtros,
@@ -100,28 +105,84 @@ export default function PaginaInicio() {
           )}
         </div>
 
+        {/* Buscador visible arriba del catálogo completo */}
+        <BarraBusqueda
+          busqueda={filtros.busqueda}
+          onBusqueda={(v) => actualizarFiltro('busqueda', v || undefined)}
+        />
+
         <div className="catalogo-layout">
           {/* Panel de filtros */}
           <Filtros
             clasificacion={filtros.clasificacion}
             genero={filtros.genero}
             familiaOlfativa={filtros.familiaOlfativa}
-            busqueda={filtros.busqueda}
             onClasificacion={(v) => actualizarFiltro('clasificacion', v as ClasificacionPerfume | undefined)}
             onGenero={(v) => actualizarFiltro('genero', v as GeneroPerfume | undefined)}
             onFamilia={(v) => actualizarFiltro('familiaOlfativa', v as FamiliaOlfativa | undefined)}
-            onBusqueda={(v) => actualizarFiltro('busqueda', v || undefined)}
             onLimpiar={limpiarFiltros}
             hayFiltrosActivos={hayFiltrosActivos}
             total={total}
           />
 
-          {/* Grid de productos */}
-          <GridCatalogo
-            perfumes={perfumes}
-            cargando={cargando}
-            onAgregarAlCarrito={handleAgregarAlCarrito}
-          />
+          {/* Grilla / Secciones de productos */}
+          <div className="catalogo-contenido" style={{ flex: 1, minWidth: 0 }}>
+            {!filtros.clasificacion ? (
+              // Modo por defecto: dos bloques separados (Árabe & Diseñador arriba, Colección Nicho debajo)
+              total === 0 ? (
+                <GridCatalogo
+                  perfumes={[]}
+                  cargando={cargando}
+                  busqueda={filtros.busqueda}
+                />
+              ) : (
+                <>
+                  {arabeDisenador.length > 0 && (
+                    <SeccionCatalogo
+                      titulo="Árabe & Diseñador"
+                      descripcion="Las fragancias más cotizadas de las mejores casas internacionales y perfumería oriental."
+                      perfumes={arabeDisenador}
+                      cargando={cargando}
+                      busqueda={filtros.busqueda}
+                      onAgregarAlCarrito={handleAgregarAlCarrito}
+                    />
+                  )}
+                  {nicho.length > 0 && (
+                    <SeccionCatalogo
+                      titulo="Colección Nicho"
+                      descripcion="Creaciones exclusivas de alta perfumería de autor para coleccionistas y conocedores."
+                      perfumes={nicho}
+                      cargando={cargando}
+                      busqueda={filtros.busqueda}
+                      onAgregarAlCarrito={handleAgregarAlCarrito}
+                    />
+                  )}
+                </>
+              )
+            ) : (
+              // Modo con filtro de colección explícito: una sola sección
+              <SeccionCatalogo
+                titulo={
+                  filtros.clasificacion === 'Nicho'
+                    ? 'Colección Nicho'
+                    : filtros.clasificacion === 'Arabe'
+                    ? 'Perfumería Árabe'
+                    : 'Perfumería de Diseñador'
+                }
+                descripcion={
+                  filtros.clasificacion === 'Nicho'
+                    ? 'Creaciones exclusivas de alta perfumería de autor para coleccionistas y conocedores.'
+                    : filtros.clasificacion === 'Arabe'
+                    ? 'Fragancias orientales de gran estela, proyección y fijación exquisita.'
+                    : 'Grandes clásicos e iconos de la moda y perfumería internacional.'
+                }
+                perfumes={perfumes}
+                cargando={cargando}
+                busqueda={filtros.busqueda}
+                onAgregarAlCarrito={handleAgregarAlCarrito}
+              />
+            )}
+          </div>
         </div>
 
         {/* Aviso: catálogo mostrado es una selección, no el inventario completo */}
@@ -131,7 +192,7 @@ export default function PaginaInicio() {
             ¿Buscás otro perfume que no ves aquí? No dudés en escribirnos, seguro que lo tenemos 😉
           </p>
           <a
-            href={`https://wa.me/${(process.env.NEXT_PUBLIC_WHATSAPP_NUMERO ?? '').replace(/\D/g, '')}?text=${encodeURIComponent('Hola, busco un perfume que no veo en el catálogo de Aroma Noir.')}`}
+            href={generarEnlaceWhatsappTexto('Hola, busco un perfume que no veo en el catálogo de Aroma Noir.')}
             target="_blank"
             rel="noopener noreferrer"
             className="catalogo-aviso-enlace"

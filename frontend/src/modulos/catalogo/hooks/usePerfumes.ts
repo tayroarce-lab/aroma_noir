@@ -4,32 +4,30 @@ import { useState, useMemo } from 'react';
 import type { Perfume, FiltrosCatalogo } from '../tipos/Perfume.tipos';
 import { CATALOGO_PERFUMES } from '../tipos/datos-catalogo';
 
-// En producción, este hook llamaría a la API real:
-// import { clienteApi } from '@/lib/clienteApi';
-// const { data } = useQuery({ queryKey: ['perfumes', filtros], queryFn: () => clienteApi.obtener('/perfumes') });
+function ordenarPorDestacado(lista: Perfume[]): Perfume[] {
+  return [...lista].sort((a, b) => (b.destacado ? 1 : 0) - (a.destacado ? 1 : 0));
+}
 
 export function usePerfumes() {
   const [filtros, setFiltros] = useState<FiltrosCatalogo>({});
   const [cargando] = useState(false);
 
-  const perfumesFiltrados = useMemo(() => {
-    let resultado: Perfume[] = CATALOGO_PERFUMES;
+  const { perfumes, arabeDisenador, nicho } = useMemo(() => {
+    // 1. Filtrado base (género, familia olfativa, marca, búsqueda)
+    let base: Perfume[] = CATALOGO_PERFUMES;
 
-    if (filtros.clasificacion) {
-      resultado = resultado.filter((p) => p.clasificacion === filtros.clasificacion);
-    }
     if (filtros.genero) {
-      resultado = resultado.filter((p) => p.genero === filtros.genero);
+      base = base.filter((p) => p.genero === filtros.genero);
     }
     if (filtros.familiaOlfativa) {
-      resultado = resultado.filter((p) => p.familiaOlfativa === filtros.familiaOlfativa);
+      base = base.filter((p) => p.familiaOlfativa === filtros.familiaOlfativa);
     }
     if (filtros.marcaId) {
-      resultado = resultado.filter((p) => p.marcaId === filtros.marcaId);
+      base = base.filter((p) => p.marcaId === filtros.marcaId);
     }
     if (filtros.busqueda) {
       const termino = filtros.busqueda.toLowerCase();
-      resultado = resultado.filter(
+      base = base.filter(
         (p) =>
           p.nombre.toLowerCase().includes(termino) ||
           p.marca.nombre.toLowerCase().includes(termino) ||
@@ -37,7 +35,27 @@ export function usePerfumes() {
       );
     }
 
-    return resultado;
+    // 2. Grupos para modo dual (Árabe & Diseñador vs Nicho)
+    const grupoArabeDisenador = ordenarPorDestacado(
+      base.filter((p) => p.clasificacion === 'Arabe' || p.clasificacion === 'Diseñador'),
+    );
+    const grupoNicho = ordenarPorDestacado(
+      base.filter((p) => p.clasificacion === 'Nicho'),
+    );
+
+    // 3. Lista plana según filtro de clasificación
+    let plana: Perfume[];
+    if (filtros.clasificacion) {
+      plana = ordenarPorDestacado(base.filter((p) => p.clasificacion === filtros.clasificacion));
+    } else {
+      plana = [...grupoArabeDisenador, ...grupoNicho];
+    }
+
+    return {
+      perfumes: plana,
+      arabeDisenador: grupoArabeDisenador,
+      nicho: grupoNicho,
+    };
   }, [filtros]);
 
   const actualizarFiltro = <K extends keyof FiltrosCatalogo>(
@@ -54,8 +72,10 @@ export function usePerfumes() {
   );
 
   return {
-    perfumes: perfumesFiltrados,
-    total: perfumesFiltrados.length,
+    perfumes,
+    arabeDisenador,
+    nicho,
+    total: perfumes.length,
     cargando,
     filtros,
     actualizarFiltro,

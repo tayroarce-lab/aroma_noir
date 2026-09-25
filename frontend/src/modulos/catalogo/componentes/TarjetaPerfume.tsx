@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Perfume } from '../tipos/Perfume.tipos';
 import { formatearCRC } from '@/lib/formateadores';
 import PlaceholderPerfume from './PlaceholderPerfume';
@@ -42,10 +43,11 @@ export default function TarjetaPerfume({
       {/* Imagen / Placeholder */}
       <div className="tarjeta-imagen-envoltorio">
         {perfume.imagenUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={perfume.imagenUrl}
             alt={`${perfume.marca.nombre} ${perfume.nombre}`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             className="tarjeta-imagen"
           />
         ) : (

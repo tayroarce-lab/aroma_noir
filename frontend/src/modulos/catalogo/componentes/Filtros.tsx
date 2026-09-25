@@ -6,11 +6,9 @@ interface PropsFiltros {
   clasificacion?: ClasificacionPerfume;
   genero?: GeneroPerfume;
   familiaOlfativa?: FamiliaOlfativa;
-  busqueda?: string;
   onClasificacion: (v: ClasificacionPerfume | undefined) => void;
   onGenero: (v: GeneroPerfume | undefined) => void;
   onFamilia: (v: FamiliaOlfativa | undefined) => void;
-  onBusqueda: (v: string) => void;
   onLimpiar: () => void;
   hayFiltrosActivos: boolean;
   total: number;
@@ -36,38 +34,15 @@ export default function Filtros({
   clasificacion,
   genero,
   familiaOlfativa,
-  busqueda,
   onClasificacion,
   onGenero,
   onFamilia,
-  onBusqueda,
   onLimpiar,
   hayFiltrosActivos,
   total,
 }: PropsFiltros) {
   return (
     <aside className="filtros-contenedor">
-      {/* Buscador */}
-      <div className="filtros-seccion">
-        <div className="buscador-envoltorio">
-          <svg className="buscador-icono" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-              d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
-          </svg>
-          <input
-            type="text"
-            placeholder="Buscar perfume o marca..."
-            value={busqueda ?? ''}
-            onChange={(e) => onBusqueda(e.target.value)}
-            className="buscador-input"
-          />
-          {busqueda && (
-            <button onClick={() => onBusqueda('')} className="buscador-limpiar" aria-label="Limpiar búsqueda">
-              ✕
-            </button>
-          )}
-        </div>
-      </div>
 
       {/* Clasificación */}
       <div className="filtros-seccion">

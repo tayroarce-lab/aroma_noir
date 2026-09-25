@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 
 const NAV_ITEMS = [
   { href: '/admin', etiqueta: 'Dashboard',  icono: '◈' },
-  { href: '/admin/perfumes', etiqueta: 'Perfumes', icono: '◇' },
   { href: '/admin/pedidos',  etiqueta: 'Pedidos',  icono: '◻' },
   { href: '/',               etiqueta: 'Ver Tienda', icono: '↗' },
 ];
@@ -20,7 +19,7 @@ export default function LayoutAdmin({ children }: { children: React.ReactNode })
         <div className="admin-sidebar-logo">
           <span className="admin-logo-icono">✦</span>
           <div>
-            <p className="admin-logo-texto">LuxeParfums</p>
+            <p className="admin-logo-texto">Aroma Noir</p>
             <p className="admin-logo-subtexto">Panel de Admin</p>
           </div>
         </div>
@@ -39,7 +38,7 @@ export default function LayoutAdmin({ children }: { children: React.ReactNode })
         </nav>
 
         <div className="admin-sidebar-footer">
-          <p className="admin-version">v1.0 · LuxeParfums CR</p>
+          <p className="admin-version">v1.0 · Aroma Noir CR</p>
         </div>
       </aside>
 

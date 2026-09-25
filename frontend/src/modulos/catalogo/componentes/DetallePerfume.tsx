@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Perfume } from '../tipos/Perfume.tipos';
 import { formatearCRC } from '@/lib/formateadores';
 import { useCarritoEstado } from '@/modulos/carrito/estado/useCarritoEstado';
@@ -69,10 +70,12 @@ export default function DetallePerfume({ perfume }: PropsDetallePerfume) {
           <div className="detalle-columna-visual">
             <div className="detalle-imagen-envoltorio">
               {perfume.imagenUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
+                <Image
                   src={perfume.imagenUrl}
                   alt={`${perfume.marca.nombre} ${perfume.nombre}`}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="detalle-imagen"
                 />
               ) : (

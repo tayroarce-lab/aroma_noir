@@ -143,3 +143,15 @@ export function validarDatosCliente(datos: Partial<DatosCliente>): string[] {
 
   return errores;
 }
+
+/**
+ * Genera un enlace de WhatsApp con un mensaje de texto libre.
+ * @param mensaje Mensaje a enviar en la conversación
+ * @returns Enlace directo wa.me con el número configurado y el mensaje codificado
+ */
+export function generarEnlaceWhatsappTexto(mensaje: string): string {
+  const numeroNegocio =
+    process.env.NEXT_PUBLIC_WHATSAPP_NUMERO ?? '50600000000';
+  const numeroCodificado = limpiarNumero(numeroNegocio);
+  return `https://wa.me/${numeroCodificado}?text=${encodeURIComponent(mensaje)}`;
+}

@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useEffect, useSyncExternalStore } from 'react';
+import Image from 'next/image';
 import { useCarritoEstado } from '../estado/useCarritoEstado';
 import { formatearCRC } from '@/lib/formateadores';
+import PlaceholderPerfume from '@/modulos/catalogo/componentes/PlaceholderPerfume';
 import {
   generarEnlaceWhatsapp,
   validarDatosCliente,
@@ -150,17 +152,15 @@ export default function CajonCarrito() {
                       {/* Miniatura */}
                       <div className="cajon-item-imagen">
                         {item.perfume.imagenUrl ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img src={item.perfume.imagenUrl} alt={item.perfume.nombre} />
+                          <Image
+                            src={item.perfume.imagenUrl}
+                            alt={item.perfume.nombre}
+                            fill
+                            sizes="72px"
+                            style={{ objectFit: 'cover' }}
+                          />
                         ) : (
-                          <div className="cajon-item-placeholder">
-                            <svg viewBox="0 0 40 40" fill="none">
-                              <ellipse cx="20" cy="28" rx="11" ry="9" stroke="currentColor" strokeWidth="1.2" />
-                              <rect x="15" y="12" width="10" height="5" rx="1.5" stroke="currentColor" strokeWidth="1.2" />
-                              <path d="M18 17 Q20 10 22 17" stroke="currentColor" strokeWidth="1.2" fill="none" />
-                              <line x1="20" y1="6" x2="20" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-                            </svg>
-                          </div>
+                          <PlaceholderPerfume marca={item.perfume.marca.nombre} compacto />
                         )}
                       </div>
 

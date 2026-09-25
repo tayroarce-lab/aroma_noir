@@ -19,7 +19,7 @@ export default function PaginaAdmin() {
         <div>
           <h1 className="admin-titulo">Dashboard</h1>
           <p className="admin-subtitulo">
-            Resumen ejecutivo de LuxeParfums CR
+            Resumen ejecutivo de Aroma Noir CR
           </p>
         </div>
         <div className="admin-header-acciones">
