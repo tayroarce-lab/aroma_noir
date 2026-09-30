@@ -74,7 +74,7 @@ export function construirMensaje(resumen: ResumenPedido): string {
     '━━━━━━━━━━━━━━━━━━━━',
     `📅 Pedido generado: ${fechaHora}`,
     '',
-    '_Este mensaje fue generado automáticamente desde aroma-noir.vercel.app_',
+    '_Este mensaje fue generado automáticamente desde aromanoir.vercel.app_',
   ].join('\n');
 
   return encabezado + lineasProductos + resumenPago;
