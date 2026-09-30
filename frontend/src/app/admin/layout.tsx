@@ -38,6 +38,16 @@ export default function LayoutAdmin({ children }: { children: React.ReactNode })
         </nav>
 
         <div className="admin-sidebar-footer">
+          <button
+            onClick={async () => {
+              await fetch('/api/admin/logout', { method: 'POST' });
+              window.location.href = '/acceso-admin';
+            }}
+            className="admin-nav-item w-full text-left"
+          >
+            <span className="admin-nav-icono">⎋</span>
+            <span>Cerrar sesión</span>
+          </button>
           <p className="admin-version">v1.0 · Aroma Noir CR</p>
         </div>
       </aside>
